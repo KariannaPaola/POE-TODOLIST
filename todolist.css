@@ -12,4 +12,5 @@ body{
   padding: 10px;
   width: auto;
   font-weight: 600;
+  border: rgb(224, 94, 94) solid 2px;
 }
