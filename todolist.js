@@ -1,6 +1,6 @@
 const btnEnviar=document.getElementById("btnEnviar");
 const divPadre=document.getElementById("divPadre");
-const nuevaTareaRegex=  /^[a-zA-Z0-9 ]+$/;
+const nuevaTareaRegex=  /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
 
 var tareas=[]
 
@@ -30,5 +30,6 @@ function mostrarTarea(){
     nuevaTarea.innerHTML =`<input type="checkbox"> ${tarea} <button onclick="eliminar(${tareas.indexOf(tarea)})"><i class="fa-solid fa-trash"></i></button>`; 
     nuevaTarea.classList.add('centrado')
     divPadre.appendChild(nuevaTarea);
+    document.getElementById("inputUser").value=""
   }
 }
