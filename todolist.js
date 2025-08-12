@@ -2,7 +2,7 @@ const btnEnviar=document.getElementById("btnEnviar");
 const divPadre=document.getElementById("divPadre");
 const nuevaTareaRegex=  /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
 
-var tareas=[]
+let tareas=[]
 
 function agregarTarea(){
   const inputUser=document.getElementById("inputUser").value
@@ -12,9 +12,10 @@ function agregarTarea(){
   else if(nuevaTareaRegex.test(inputUser)==false){
     alert("Ingrese una tarea válida")
   }
-  else
+  else{
     tareas.push(inputUser)
     mostrarTarea()
+  } 
 }
 
 function eliminar(index){
